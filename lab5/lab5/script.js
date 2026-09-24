@@ -1,9 +1,9 @@
 let accountBalance = 100;
-const DepositAmount = 30;
-const WithdrawAmount = 30;
+const depositAmount = 30;
+const withdrawAmount = 30;
 
-function DepositAmount() {
-    accountBalance = accountBalance + DepositAmount;
+function depositAmount() {
+    accountBalance = accountBalance + depositAmount;
 
     const accountText = document.getElementById("Account Balance");
     const statusText = document.getElementById("deposit/withdraw-message");
@@ -11,7 +11,7 @@ function DepositAmount() {
     if(accountBalance > 0)
     {
         accountText.innerText = accountBalance;
-        statusText.innerText = "You've successfully added $10 to your bank account!";
+        statusText.innerText = "You've successfully added $30 to your bank account!";
     }
     else
     {
@@ -27,8 +27,8 @@ function DepositAmount() {
     }
 }
 
-function WithdrawAmount() {
-    accountBalance = accountBalance - WithdrawAmount;
+function withdrawAmount() {
+    accountBalance = accountBalance - withdrawAmount;
 
     const accountText = document.getElementById("Account Balance");
     const statusText = document.getElementById("deposit/withdraw-message");
