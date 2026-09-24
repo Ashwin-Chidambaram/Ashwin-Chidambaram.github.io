@@ -21,7 +21,8 @@ function withdrawMoney() {
     const accountText = document.getElementById("account-balance");
     const statusText = document.getElementById("deposit-withdraw-message");
 
-    // Make sure there is enough money to withdraw
+}
+
     if (accountBalance >= withdrawAmount) {
         accountBalance -= withdrawAmount;
 
