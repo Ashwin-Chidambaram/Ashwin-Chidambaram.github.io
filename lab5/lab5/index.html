@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Bank Account</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="player-card">
-            <h2>Account Status</h2>
+<head>
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <p>Account Balance: <span id="Account Balance">$100</span></p>
-            <p id="deposit-withdraw-message">Ready To Deposit or Withdraw</p>
-
-            <button onclick="depositMoney()">Deposit $30</button>
-            <button onclick="withdrawMoney()">Withdraw $30</button>
-        </div>
-
-        <script src="script.js"></script>
-    </body>
+<body>
+    <div id="bank-card">
+        <h2>Account Status</h2>
+        <p>
+            Account Balance:
+            <span id="account-balance">$100</span>
+        </p>
+        <p id="deposit-withdraw-message">
+            Ready to Deposit or Withdraw
+        </p>
+        <button onclick="depositMoney()">Deposit $30</button>
+        <button onclick="withdrawMoney()">Withdraw $30</button>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

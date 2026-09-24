@@ -7,7 +7,7 @@ body {
     transition: background-color 0.3s;
 }
 
-#player-card {
+#bank-card {
     background-color: darkslategray;
     border: 2px solid wheat;
     border-radius: 10px;
@@ -18,6 +18,7 @@ body {
 
 button {
     padding: 10px 20px;
+    margin: 5px;
     font-size: 16px;
     font-weight: bold;
     background-color: peru;
