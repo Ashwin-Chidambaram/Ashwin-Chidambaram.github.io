@@ -2,16 +2,16 @@ let accountBalance = 100;
 const depositAmount = 30;
 const withdrawAmount = 30;
 
-function depositAmount() {
+function depositMoney() {
     accountBalance = accountBalance + depositAmount;
 
     const accountText = document.getElementById("Account Balance");
-    const statusText = document.getElementById("deposit/withdraw-message");
+    const statusText = document.getElementById("deposit-withdraw-message");
 
     if(accountBalance > 0)
     {
         accountText.innerText = accountBalance;
-        statusText.innerText = "You've successfully added $30 to your bank account!";
+        statusText.innerText = "You've successfully deposited $30 to your bank account!";
     }
     else
     {
@@ -22,21 +22,21 @@ function depositAmount() {
 
         document.body.style.backgroundColor = "#5a1a1a";
 
-        document.querySelector("button").disabled = true;
+        document.querySelector("button").disabled = false;
         document.querySelector("button").innerText = "You're out of money!";
     }
 }
 
-function withdrawAmount() {
+function withdrawMoney() {
     accountBalance = accountBalance - withdrawAmount;
 
     const accountText = document.getElementById("Account Balance");
-    const statusText = document.getElementById("deposit/withdraw-message");
+    const statusText = document.getElementById("deposit-withdraw-message");
 
     if(accountBalance > 0)
     {
         accountText.innerText = accountBalance;
-        statusText.innerText = "You've successfully withdrawn $10 to your bank account!";
+        statusText.innerText = "You've successfully withdrawn $30 to your bank account!";
     }
     else
     {
@@ -47,7 +47,7 @@ function withdrawAmount() {
 
         document.body.style.backgroundColor = "#5a1a1a";
 
-        document.querySelector("button").disabled = true;
+        document.querySelector("button").disabled = false;
         document.querySelector("button").innerText = "You're out of money!";
     }
 }
