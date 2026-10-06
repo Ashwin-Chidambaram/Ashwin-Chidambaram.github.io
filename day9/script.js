@@ -1,15 +1,18 @@
+// script.js
+
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskList = document.getElementById("taskList");
 
-function addTask() {
-    const taskText = taskInput.value.trim();
+const starterTasks = [
+    "Bring CarolinaCard (Physical or Virtual)",
+    "Bring GameDay Ticket",
+    "Bring Clear Bag!",
+    "Bring Phone",
+    "Water Bottle (HYDRATE!)"
+];
 
-    if (taskText === "") {
-        alert("Please enter a task.");
-        return;
-    }
-
+function createTask(taskText) {
     const listItem = document.createElement("li");
     listItem.className = "task";
 
@@ -40,10 +43,25 @@ function addTask() {
     listItem.appendChild(deleteButton);
 
     taskList.appendChild(listItem);
+}
+
+function addTask() {
+    const taskText = taskInput.value.trim();
+
+    if (taskText === "") {
+        alert("Please enter a task.");
+        return;
+    }
+
+    createTask(taskText);
 
     taskInput.value = "";
     taskInput.focus();
 }
+
+starterTasks.forEach(function (task) {
+    createTask(task);
+});
 
 addButton.addEventListener("click", addTask);
 
