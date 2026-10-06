@@ -65,7 +65,7 @@ starterTasks.forEach(function (task) {
 
 addButton.addEventListener("click", addTask);
 
-taskInput.addEventListener("keypress", function (event) {
+taskInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         addTask();
     }
