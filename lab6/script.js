@@ -1,255 +1,152 @@
 
 /* TENNIS LEGENDS DASHBOARD */
-/* CSCE 102 - Web Design & Development */
+/* JavaScript - Dynamic Content */
 
-/* General Page Styling */
+// Information about each tennis player
 
-* {
-    box-sizing: border-box;
-}
+const tennisData = {
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f0;
-    color: #171914;
-}
+    federer: {
+        name: "ROGER FEDERER",
+        subtitle: "THE SWISS MAESTRO",
+        country: "Switzerland",
+        grandSlams: 20,
+        weeksNumberOne: 310,
 
-/* Main Dashboard Layout */
+        biography: "Roger Federer is a Swiss former professional tennis player known for his elegant playing style, incredible shot-making, and sportsmanship. He won 20 Grand Slam singles titles and became one of the most influential athletes in tennis history.",
 
-.dashboard-container {
-    display: flex;
-    min-height: 100vh;
-}
+        playingStyle: "Federer was famous for his one-handed backhand, accurate serving, smooth footwork, and aggressive all-court playing style. His ability to transition between offense and defense made him extremely difficult to defeat.",
 
-/* Sidebar - 30% of screen */
+        funFact: "Federer won eight Wimbledon men's singles titles, the most by any man in the tournament's history."
+    },
 
-.sidebar {
-    width: 30%;
-    background-color: #FFCC00;
-    color: #171914;
-    padding: 40px 30px;
+    nadal: {
+        name: "RAFAEL NADAL",
+        subtitle: "THE KING OF CLAY",
+        country: "Spain",
+        grandSlams: 22,
+        weeksNumberOne: 209,
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        biography: "Rafael Nadal is a Spanish former professional tennis player known for his incredible determination, athleticism, and success on clay courts. He won 22 Grand Slam singles titles and became one of the greatest competitors in tennis history.",
 
-.sidebar-header h1 {
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -2px;
-    margin: 15px 0;
-}
+        playingStyle: "Nadal was famous for his powerful left-handed forehand, heavy topspin, outstanding defense, and relentless movement. His physical endurance and mental toughness helped him dominate long rallies.",
 
-.sidebar-header p {
-    font-size: 15px;
-    line-height: 1.6;
-}
+        funFact: "Nadal won the French Open 14 times, an extraordinary record at a single Grand Slam tournament."
+    },
 
-.small-title {
-    font-size: 12px !important;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
+    djokovic: {
+        name: "NOVAK DJOKOVIC",
+        subtitle: "THE MASTER OF CONSISTENCY",
+        country: "Serbia",
+        grandSlams: 24,
+        weeksNumberOne: 428,
 
-/* Sidebar Navigation Buttons */
+        biography: "Novak Djokovic is a Serbian professional tennis player and one of the most successful players in tennis history. He has won 24 Grand Slam singles titles and is known for his remarkable consistency and mental strength.",
 
-.sidebar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
+        playingStyle: "Djokovic is famous for his exceptional return of serve, flexible movement, strong two-handed backhand, and incredible defensive abilities. He is especially effective at turning defensive situations into offensive opportunities.",
 
-.sidebar button {
-    background-color: transparent;
-    color: #171914;
+        funFact: "Djokovic holds the men's record for the most Grand Slam singles titles with 24 and has spent a record 428 weeks ranked world No. 1."
+    },
 
-    border: 2px solid #171914;
-    border-radius: 8px;
+    serena: {
+        name: "SERENA WILLIAMS",
+        subtitle: "THE QUEEN OF POWER",
+        country: "United States",
+        grandSlams: 23,
+        weeksNumberOne: 319,
 
-    padding: 18px;
-    text-align: left;
+        biography: "Serena Williams is an American former professional tennis player widely regarded as one of the greatest athletes of all time. She won 23 Grand Slam singles titles and transformed women's tennis through her powerful playing style and competitive determination.",
 
-    font-size: 17px;
-    font-weight: bold;
+        playingStyle: "Serena was known for her powerful serve, aggressive baseline shots, explosive movement, and ability to perform under pressure. Her serve was one of the most dominant weapons in tennis.",
 
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-/* Button Hover Effect */
-
-.sidebar button:hover {
-    background-color: #171914;
-    color: #FFCC00;
-    transform: translateX(5px);
-}
-
-/* Selected Player Button */
-
-.sidebar button.active {
-    background-color: #171914;
-    color: #FFCC00;
-}
-
-/* Sidebar Footer */
-
-.sidebar-footer {
-    font-size: 12px;
-    border-top: 2px solid #171914;
-    padding-top: 15px;
-}
-
-/* Main Content Area - 70% */
-
-.content-area {
-    width: 70%;
-    background-color: #f5f5f0;
-    padding: 65px 60px;
-    min-width: 0;
-}
-
-/* Main Heading */
-
-#dynamic-content h2 {
-    font-size: 54px;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -2px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    color: #171914;
-}
-
-/* Small Section Label */
-
-.section-label {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #777777;
-    text-transform: uppercase;
-}
-
-/* Main Paragraph */
-
-.intro-text {
-    font-size: 19px;
-    line-height: 1.8;
-    color: #444444;
-    max-width: 750px;
-}
-
-/* Information Cards */
-
-.info-card {
-    background-color: white;
-    border-left: 6px solid #FFCC00;
-    border-radius: 10px;
-    padding: 25px;
-    margin-top: 30px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-}
-
-.info-card h3 {
-    margin-top: 0;
-    font-size: 22px;
-}
-
-.info-card p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #444444;
-}
-
-/* Player Statistics */
-
-.stats-container {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.stat-card {
-    background-color: #171914;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 140px;
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 36px;
-    font-weight: bold;
-    color: #FFCC00;
-}
-
-.stat-label {
-    font-size: 13px;
-    margin-top: 8px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Interesting Fact */
-
-.fun-fact {
-    background-color: #fff4bd;
-    border-radius: 10px;
-    padding: 25px;
-    margin-top: 30px;
-}
-
-.fun-fact h3 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-.fun-fact p {
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-
-    .dashboard-container {
-        flex-direction: column;
+        funFact: "Serena won 23 Grand Slam singles titles, the most by any woman in the Open Era."
     }
 
-    .sidebar {
-        width: 100%;
-        padding: 25px;
-    }
+};
 
-    .sidebar-header h1 {
-        font-size: 32px;
-    }
 
-    .sidebar nav {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+// Function to change the main content
 
-    .content-area {
-        width: 100%;
-        padding: 30px 25px;
-    }
+function changeContent(player, clickedButton) {
 
-    #dynamic-content h2 {
-        font-size: 36px;
-    }
+    // Find the main content area
+    const contentBox = document.getElementById("dynamic-content");
 
-    .stats-container {
-        flex-direction: column;
-    }
+    // Get the selected player's information
+    const selectedPlayer = tennisData[player];
+
+    // Change the main content using JavaScript
+    contentBox.innerHTML = `
+
+        <p class="section-label">
+            ${selectedPlayer.subtitle}
+        </p>
+
+        <h2>${selectedPlayer.name}</h2>
+
+        <p class="intro-text">
+            ${selectedPlayer.biography}
+        </p>
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-number">
+                    ${selectedPlayer.grandSlams}
+                </div>
+                <div class="stat-label">
+                    Grand Slam Titles
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">
+                    ${selectedPlayer.weeksNumberOne}
+                </div>
+                <div class="stat-label">
+                    Weeks at World No. 1
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">
+                    ${selectedPlayer.country}
+                </div>
+                <div class="stat-label">
+                    Country
+                </div>
+            </div>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Playing Style</h3>
+
+            <p>
+                ${selectedPlayer.playingStyle}
+            </p>
+
+        </div>
+
+        <div class="fun-fact">
+
+            <h3>Did You Know?</h3>
+
+            <p>
+                ${selectedPlayer.funFact}
+            </p>
+
+        </div>
+    `;
+
+    // Remove the active style from all buttons
+    const buttons = document.querySelectorAll(".sidebar button");
+
+    buttons.forEach(function(button) {
+        button.classList.remove("active");
+    });
+
+    // Highlight the selected button
+    clickedButton.classList.add("active");
 }
