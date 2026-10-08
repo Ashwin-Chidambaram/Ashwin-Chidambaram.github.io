@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Legends Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar: 30% of screen -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <p class="small-title">THE PLAYER FILES</p>
+                <h1>TENNIS<br>LEGENDS.</h1>
+                <p>Explore the greatest players in tennis history.</p>
+            </div>
+
+            <nav>
+                <button onclick="changeContent('federer', this)">
+                    Roger Federer
+                </button>
+
+                <button onclick="changeContent('nadal', this)">
+                    Rafael Nadal
+                </button>
+
+                <button onclick="changeContent('djokovic', this)">
+                    Novak Djokovic
+                </button>
+
+                <button onclick="changeContent('serena', this)">
+                    Serena Williams
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>CSCE 102 | Tennis Dashboard</p>
+                <p>University of South Carolina</p>
+            </div>
+        </aside>
+
+        <!-- Main content: 70% of screen -->
+        <main class="content-area">
+
+            <div id="dynamic-content">
+
+                <p class="section-label">WELCOME TO THE COURT</p>
+
+                <h2>THE GREATS<br>OF THE GAME.</h2>
+
+                <p class="intro-text">
+                    Welcome to the Tennis Legends Dashboard!
+                    Explore the careers, achievements, and playing
+                    styles of four of the greatest tennis players
+                    in history.
+                </p>
+
+                <div class="info-card">
+                    <h3>Ready to explore?</h3>
+                    <p>
+                        Select a tennis player from the yellow
+                        sidebar to learn about their career,
+                        Grand Slam achievements, playing style,
+                        and interesting facts.
+                    </p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
