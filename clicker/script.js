@@ -15,7 +15,7 @@ function writeCode()
 
 function buyKeyboard()
 {
-    if(linesofCode >= upgradeCost)
+    if (linesofCode >= upgradeCost)
     {
         linesOfCode = linesOfCode - upgradeCost;
         clickPower clickPower + 1;
