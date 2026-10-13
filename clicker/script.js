@@ -10,6 +10,17 @@ let internCost = 100;
 function writeCode()
 {
     linesOfCode = linesOfCode + clickPower;
+    updateScreen()
+}
+
+function buyKeyboard()
+{
+    if(linesofCode >= upgradeCost)
+    {
+        linesOfCode = linesOfCode - upgradeCost;
+        clickPower clickPower + 1;
+        upgradeCost = upgradeCost + 1.5;
+    }
 }
 
 function updateScreen()
