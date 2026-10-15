@@ -57,8 +57,6 @@ function buyMegaphone()
     }
 }
 
-
-
 // Recruit Student Fan
 // Student fans automatically generate 1 point every second
 
@@ -67,16 +65,11 @@ function recruitFan()
     if(gamecockPoints >= fanCost)
     {
         gamecockPoints = gamecockPoints - fanCost;
-
         studentFans = studentFans + 1;
-
         fanCost = Math.ceil(fanCost * 1.5);
-
         updateScreen();
     }
 }
-
-
 
 // Bring Cocky
 // Each Cocky level generates 5 points every second
@@ -86,16 +79,11 @@ function bringCocky()
     if(gamecockPoints >= cockyCost)
     {
         gamecockPoints = gamecockPoints - cockyCost;
-
         cockyLevel = cockyLevel + 1;
-
         cockyCost = Math.ceil(cockyCost * 1.5);
-
         updateScreen();
     }
 }
-
-
 
 // Recruit Marching Band
 // Each band member generates 15 points every second
@@ -105,16 +93,11 @@ function recruitBand()
     if(gamecockPoints >= bandCost)
     {
         gamecockPoints = gamecockPoints - bandCost;
-
         bandMembers = bandMembers + 1;
-
         bandCost = Math.ceil(bandCost * 1.5);
-
         updateScreen();
     }
 }
-
-
 
 // Update Everything On The Screen
 
@@ -123,34 +106,26 @@ function updateScreen()
     document.getElementById("score-display").innerText =
         gamecockPoints + " Gamecock Points";
 
-
     document.getElementById("power-display").innerText =
         cheerPower;
-
 
     document.getElementById("cost-display").innerText =
         megaphoneCost;
 
-
     document.getElementById("fan-display").innerText =
         studentFans;
-
 
     document.getElementById("fan-cost-display").innerText =
         fanCost;
 
-
     document.getElementById("cocky-display").innerText =
         cockyLevel;
-
 
     document.getElementById("cocky-cost-display").innerText =
         cockyCost;
 
-
     document.getElementById("band-display").innerText =
         bandMembers;
-
 
     document.getElementById("band-cost-display").innerText =
         bandCost;
