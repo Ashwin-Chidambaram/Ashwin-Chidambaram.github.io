@@ -1,32 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Code Clicker</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="game-container">
-            <header>
-                <h1>Code Clicker</h1>
-                <h2 id="score-display">0 lines of code</h2>
-                <button id="main-button" onclick="writeCode()">Write Code</button>
-            </header>
 
-            <main id="shop">
-                <h3>Hardware Store (Manual Upgrade)</h3>
-                <p>Current Click Power: <span id="power-display">1</span></p>
-                <button id="upgrade-button" onClick="buyKeyboard()">
-                    Buy Mechanical Keyboard (Cost: <span id="cost-display">50</span>)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gamecock Stadium Clicker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container">
+
+        <header>
+
+            <h1>Gamecock Stadium Clicker</h1>
+
+            <p class="subtitle">
+                Build the Ultimate GameDay!
+            </p>
+
+            <h2 id="score-display">0 Gamecock Points</h2>
+
+            <button id="main-button" onclick="cheerForCarolina()">
+                CHEER FOR CAROLINA!
+            </button>
+
+        </header>
+
+
+        <main id="shop">
+
+            <!-- Manual Upgrade -->
+            <section class="upgrade-section">
+
+                <h3>📣 Fan Upgrades</h3>
+
+                <p>
+                    Current Cheer Power:
+                    <span id="power-display">1</span>
+                </p>
+
+                <button id="upgrade-button" onclick="buyMegaphone()">
+
+                    Buy Megaphone
+                    (Cost:
+                    <span id="cost-display">50</span>)
+
                 </button>
 
-                <h3>Hiring Department (Auto Clicking)</h3>
-                <p>Active Interns: <span id="intern-display">0</span></p>
-                <button id="intern-button" onClick="buyIntern()">
-                    Hire Intern (Cost: <span id="cost-intern-display">100</span>)
-                </button>
-            </main>
-        </div>
+            </section>
 
-        <script src="script.js"></script>
-    </body>
+
+            <!-- Automatic Upgrade #1 -->
+            <section class="upgrade-section">
+
+                <h3>🏟️ Student Section</h3>
+
+                <p>
+                    Student Fans:
+                    <span id="fan-display">0</span>
+                </p>
+
+                <button id="fan-button" onclick="recruitFan()">
+
+                    Recruit Student Fan
+                    (Cost:
+                    <span id="fan-cost-display">100</span>)
+
+                </button>
+
+            </section>
+
+
+            <!-- Automatic Upgrade #2 -->
+            <section class="upgrade-section">
+
+                <h3>🐔 Cocky Upgrade</h3>
+
+                <p>
+                    Cocky Level:
+                    <span id="cocky-display">0</span>
+                </p>
+
+                <button id="cocky-button" onclick="bringCocky()">
+
+                    Bring Cocky
+                    (Cost:
+                    <span id="cocky-cost-display">250</span>)
+
+                </button>
+
+            </section>
+
+
+            <!-- Automatic Upgrade #3 -->
+            <section class="upgrade-section">
+
+                <h3>🥁 Marching Band</h3>
+
+                <p>
+                    Band Members:
+                    <span id="band-display">0</span>
+                </p>
+
+                <button id="band-button" onclick="recruitBand()">
+
+                    Recruit Marching Band
+                    (Cost:
+                    <span id="band-cost-display">500</span>)
+
+                </button>
+
+            </section>
+
+
+            <!-- Reset Button -->
+            <section class="reset-section">
+
+                <button id="reset-button" onclick="resetGame()">
+                    Reset Game
+                </button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
