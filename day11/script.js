@@ -26,9 +26,9 @@ function countdown()
     timeDisplay.innerText = timeLeft;
 
     if(timeLeft <= 0)
-    (
+    {
         endGame();
-    )
+    }
 }
 
 function hitTarget()
@@ -44,5 +44,5 @@ function endGame()
     targetElement.style.display = "none";
     startButton.disabled = false;
 
-    alert("WHISTLE* You scored: " + score);
+    alert("*WHISTLE* You scored: " + score);
 }
